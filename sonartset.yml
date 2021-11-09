@@ -1,0 +1,76 @@
+
+
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+
+stages:
+  - stage: build
+    jobs:
+      - job: Deployee
+        pool:
+          vmImage: windows-2019
+        steps:
+        - task: UseDotNet@2
+          displayName: 'Use .NET Core sdk 5.x'
+          inputs:
+            version: 5.x
+
+        - task: NuGetToolInstaller@0
+          displayName: 'Use NuGet 5.x'
+          inputs:
+            versionSpec: 5.x
+            checkLatest: true
+
+        - task: NuGetCommand@2
+          displayName: 'NuGet restore'
+          inputs:
+            restoreSolution: '**\*.sln'
+
+        - task: SonarQubePrepare@4
+          inputs:
+            SonarQube: 'SonarQubeIntegration'
+            scannerMode: 'MSBuild'
+            projectKey: 'eShopWebKey'
+            projectName: 'eShopWebName'
+
+        - task: MSBuild@1
+          inputs:
+            solution: '**/*.sln'
+
+        - task: SonarQubeAnalyze@4
+
+        - task: SonarQubePublish@4
+          inputs:
+            pollingTimeoutSec: '300'
+
+  - stage: imagebuild
+    jobs:
+      - job: dockerimagecreation
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+
+        - task: Docker@2
+          inputs:
+            containerRegistry: 'ACR_SVC_CONNECTION'
+            repository: 'eshop/api'
+            command: 'buildAndPush'
+            Dockerfile: '**/src/PublicApi/Dockerfile'
+            buildContext: '.'
+            tags: '$(Build.BuildId)'
+            
+        - task: Docker@2
+          inputs:
+            containerRegistry: 'ACR_SVC_CONNECTION'
+            repository: 'eshop/web'
+            command: 'buildAndPush'
+            Dockerfile: '**/src/Web/Dockerfile'
+            buildContext: '.'
+            tags: '$(Build.BuildId)'
+
