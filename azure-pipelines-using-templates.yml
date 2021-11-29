@@ -18,15 +18,18 @@ extends:
   template: pipeline_templates/azure_pipeline_template.yml@pipelinetemplates
   parameters:
     agentPool: 'windows-2019'
+    checkOutSteps:
+      - checkout: self
+      - checkout: pipelinetemplates
     projectName: 'Spring Boot App Gradle'
     buildType: 'dotnet'
     workingDirectory: 'eshoponweb'
     sonarProjectKey: 'eshop-web'
     infraTerraformFolder: 'infrastructure'
     dockerOrgName: 'vijayace'
-    checkOutSteps:
-      - checkout: self
-      - checkout: pipelinetemplates
+    buildDockerImage: false
+    dotnetCoreSDKVersion: '5.0.403'
+
 
     # sonarProjectKey: 'spring-boot-application'
     # beforeJobSteps:
