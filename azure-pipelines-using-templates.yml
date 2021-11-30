@@ -28,7 +28,8 @@ extends:
     sonarProjectKey: 'eshop-web'
     infraTerraformFolder: 'infrastructure'
     dockerOrgName: 'vijayace'
-    buildDockerImage: false
+    buildDockerImage: true
+    dockerFilePath: '/src/Web/Dockerfile'
     dotnetProjectORSolution: '/eShopOnWeb.sln'
 
     # sonarProjectKey: 'spring-boot-application'
