@@ -29,6 +29,7 @@ extends:
     infraTerraformFolder: 'infrastructure'
     dockerOrgName: 'vijayace'
     buildDockerImage: false
+    projectORSolution: '/eShopOnWeb.sln'
 
     # sonarProjectKey: 'spring-boot-application'
     # beforeJobSteps:
