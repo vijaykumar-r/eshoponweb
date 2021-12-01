@@ -17,20 +17,15 @@ resources:
 extends:
   template: pipeline_templates/pipeline_template.yml@pipelinetemplates
   parameters:
-    agentPool: 'windows-2019'
-    checkOutSteps:
-      - checkout: self
-      - checkout: pipelinetemplates
+    # agentPool: 'windows-2019'
     projectName: 'eShop On Web'
     workingDirectory: 'eshoponweb'
     buildType: 'dotnet'
     dotnetCoreSDKVersion: '5.0.403'
     sonarProjectKey: 'eshop-web'
-    buildInfrastructure: true
     infraTerraformFolder: 'infrastructure'
-    buildDockerImage: true
-    dockerFilePath: '/src/Web/Dockerfile'
-    dotnetProjectORSolution: '/eShopOnWeb.sln'
+    dockerFilePath: 'src/Web/Dockerfile'
+    dotnetProjectORSolution: 'eShopOnWeb.sln'
 
     # sonarProjectKey: 'spring-boot-application'
     # beforeJobSteps:
