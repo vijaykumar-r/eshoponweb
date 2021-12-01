@@ -26,8 +26,8 @@ extends:
     buildType: 'dotnet'
     dotnetCoreSDKVersion: '5.0.403'
     sonarProjectKey: 'eshop-web'
+    buildInfrastructure: true
     infraTerraformFolder: 'infrastructure'
-    dockerOrgName: 'vijayace'
     buildDockerImage: true
     dockerFilePath: '/src/Web/Dockerfile'
     dotnetProjectORSolution: '/eShopOnWeb.sln'
