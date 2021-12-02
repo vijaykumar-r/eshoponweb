@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/dotnet-architecture/eShopOnWeb/workflows/eShopOnWeb%20Build%20and%20Test/badge.svg)](https://github.com/dotnet-architecture/eShopOnWeb/actions)
+[![Build Status](https://dev.azure.com/vijaykumar-r/devops_reference_architecture/_apis/build/status/2%20-%20eShopOnWeb/eShopOnWeb%20-%20Web?repoName=vijaykumar-r%2Feshoponweb&branchName=master)](https://dev.azure.com/vijaykumar-r/devops_reference_architecture/_build/latest?definitionId=13&repoName=vijaykumar-r%2Feshoponweb&branchName=master)
 
 # Microsoft eShopOnWeb ASP.NET Core Reference Application
 
@@ -8,13 +8,13 @@ A list of Frequently Asked Questions about this repository can be found [here](h
 
 ## Overview Video
 
-[Steve "ardalis" Smith](https://twitter.com/ardalis) recorded [a live stream providing an overview of the eShopOnWeb reference app](https://www.youtube.com/watch?v=vRZ8ucGac8M&ab_channel=Ardalis) in October 2020. 
+[Steve "ardalis" Smith](https://twitter.com/ardalis) recorded [a live stream providing an overview of the eShopOnWeb reference app](https://www.youtube.com/watch?v=vRZ8ucGac8M&ab_channel=Ardalis) in October 2020.
 
 ## eBook
 
 This reference application is meant to support the free .PDF download ebook: [Architecting Modern Web Applications with ASP.NET Core and Azure](https://aka.ms/webappebook), updated to **ASP.NET Core 5.0**. [Also available in ePub/mobi formats](https://dotnet.microsoft.com/learn/web/aspnet-architecture).
 
-You can also read the book in online pages at the .NET docs here: 
+You can also read the book in online pages at the .NET docs here:
 https://docs.microsoft.com/dotnet/architecture/modern-web-apps-azure/
 
 [<img src="https://user-images.githubusercontent.com/782127/74948402-48512c80-53ca-11ea-948a-58d037440888.png" height="300" />](https://dotnet.microsoft.com/learn/web/aspnet-architecture)
