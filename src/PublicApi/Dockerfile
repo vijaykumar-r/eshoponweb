@@ -3,6 +3,6 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-COPY output ./
+COPY artifactOutput ./
 
 ENTRYPOINT ["dotnet", "PublicApi.dll"]
