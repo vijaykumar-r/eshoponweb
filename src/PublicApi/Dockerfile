@@ -3,6 +3,6 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-COPY output/Web ./
+COPY output ./
 
 ENTRYPOINT ["dotnet", "PublicApi.dll"]
