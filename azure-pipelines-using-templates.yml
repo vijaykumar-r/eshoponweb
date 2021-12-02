@@ -25,7 +25,7 @@ extends:
     sonarProjectKey: 'eshop-web'
     infraTerraformFolder: 'infrastructure'
     dockerFilePath: 'src/Web/Dockerfile'
-    dotnetProjectORSolution: 'eShopOnWeb.sln'
+    dotnetProjectORSolution: 'src/Web/Web.csproj'
 
     # sonarProjectKey: 'spring-boot-application'
     # beforeJobSteps:
