@@ -26,6 +26,7 @@ extends:
     buildType: 'dotnet'
     dotnetCoreSDKVersion: '5.0.403'
     sonarProjectKey: 'eshop-web'
+    infraTerraformFolder: 'infrastructure'
     dockerFilePath: 'src/PublicApi/Dockerfile'
     dotnetProjectORSolution: 'src/PublicApi/PublicApi.csproj'
 
