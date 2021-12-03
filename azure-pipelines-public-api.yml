@@ -1,10 +1,14 @@
 name: e-Shop Web Public Api
 
-trigger: none
-  # branches:
-  #   include:
-  #   - master
-  #   - refs/pull/*
+trigger:
+  branches:
+    include:
+      - master
+      - dev
+      - test
+
+pr:
+  - master
 
 resources:
   repositories:
