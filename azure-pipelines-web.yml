@@ -30,10 +30,23 @@ extends:
     dockerFilePath: 'src/Web/Dockerfile'
     dotnetProjectORSolution: 'src/Web/Web.csproj'
 
-    # sonarProjectKey: 'spring-boot-application'
-    # beforeJobSteps:
-    #   - script: echo "FROM BEFORE BUILD STAGE"
-    #     displayName: 'Pre build'
-    # afterJobSteps:
-    #   - script: echo "FROM AFTER BUILD STAGE"
-    #     displayName: 'Post build'
+    beforeBuildSteps:
+      - script: echo "MESSAGE FROM PRE BUILD STEPS"
+        displayName: 'Pre build'
+    afterBuildSteps:
+      - script: echo "MESSAGE FROM POST BUILD STEPS"
+        displayName: 'Post build'
+
+    # beforeBuildInfraSteps:
+    #   - script: echo "MESSAGE FROM PRE INFRA BUILD STEPS"
+    #     displayName: 'Pre Infra Build'
+    # afterBuildInfraSteps:
+    #   - script: echo "MESSAGE FROM POST INFRA BUILD STEPS"
+    #     displayName: 'Post Infra Build'
+    #
+    # beforeImageBuildSteps:
+    #   - script: echo "MESSAGE FROM PRE IMAGE BUILD STEPS"
+    #     displayName: 'Pre Image Build'
+    # afterImageBuildSteps:
+    #   - script: echo "MESSAGE FROM POST IMAGE BUILD STEPS"
+    #     displayName: 'Post Image Build'
