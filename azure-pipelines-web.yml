@@ -30,12 +30,12 @@ extends:
     dockerFilePath: 'src/Web/Dockerfile'
     dotnetProjectORSolution: 'src/Web/Web.csproj'
 
-    beforeBuildSteps:
-      - script: echo "MESSAGE FROM PRE BUILD STEPS"
-        displayName: 'Pre build'
-    afterBuildSteps:
-      - script: echo "MESSAGE FROM POST BUILD STEPS"
-        displayName: 'Post build'
+    # beforeBuildSteps:
+    #   - script: echo "MESSAGE FROM PRE BUILD STEPS"
+    #     displayName: 'Pre build'
+    # afterBuildSteps:
+    #   - script: echo "MESSAGE FROM POST BUILD STEPS"
+    #     displayName: 'Post build'
 
     beforeBuildInfraSteps:
       - script: echo "MESSAGE FROM PRE INFRA BUILD STEPS"
